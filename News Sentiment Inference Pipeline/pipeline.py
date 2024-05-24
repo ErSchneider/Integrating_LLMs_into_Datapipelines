@@ -6,6 +6,7 @@ import requests as r
 import json
 from litellm import completion
 import os
+import datetime
 
 VECTORIZER_CACHE = joblib.Memory(location='./cache', verbose=0)
 CLF_CACHE = joblib.Memory(location='./cache', verbose=0)
@@ -92,8 +93,6 @@ def run_pipeline():
         )
 
 if __name__ == '__main__':
-
-    import datetime
     start = datetime.datetime.now()
     print(start)
     run_pipeline()

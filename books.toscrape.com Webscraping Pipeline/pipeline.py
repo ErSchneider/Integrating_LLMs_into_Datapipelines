@@ -4,6 +4,7 @@ import requests
 import sqlite3
 from litellm import completion
 import json
+import datetime
 
 def get_subsites(base_url):
     html_contents = []
@@ -80,7 +81,7 @@ def run_pipeline():
         )
 
 if __name__ == '__main__':
-    import datetime
+
     start = datetime.datetime.now()
     print(start)
     run_pipeline()
