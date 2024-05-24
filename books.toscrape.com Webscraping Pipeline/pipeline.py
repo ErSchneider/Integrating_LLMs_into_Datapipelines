@@ -55,7 +55,7 @@ def extract_book_info_LLM(html_content):
     return json.loads(response_text)
 
 def write_to_db(entry):
-    with sqlite3.connect('../database.db') as connection:
+    with sqlite3.connect('database.db') as connection:
         cursor = connection.cursor()
 
         data_values = [entry[x] for x in entry]

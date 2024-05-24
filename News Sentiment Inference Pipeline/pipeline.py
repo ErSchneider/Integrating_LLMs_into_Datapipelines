@@ -70,7 +70,7 @@ def write_to_db(entry):
         try:
             data_values = [entry[x] for x in entry]
             cursor.execute('''
-                INSERT INTO inference_v0_output_LLM_test (preview, label)
+                INSERT INTO inference_v0_output (preview, label)
                 VALUES (?, ?)
             ''', data_values)
         except:
